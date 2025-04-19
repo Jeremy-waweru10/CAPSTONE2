@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEREMIANA'S THRIFT STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7ec3af2eb5.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+
+          <!-- Logo -->
+          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-6">
+              <a href="index.html" class="hover:text-red-500">Home</a>
+              <a href="shop.html" class="hover:text-red-500">Shop</a>
+              <a href="about.html" class="hover:text-red-500">About</a>
+              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+              <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                  0
+                </span>
+              </a>
+              
+              <a href="signup.html" class="text-white hover:text-gray-500 transition">
+              <i class="fa-solid fa-user"></i>
+                 </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+          </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+          <a href="index.html" class="block hover:text-red-500">Home</a>
+          <a href="shop.html" class="block hover:text-red-500">Shop</a>
+          <a href="about.html" class="block hover:text-red-500">About</a>
+          <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+      </nav>
+  </header>
+
+  <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+  </script>
+
+       <!-- Product Grid Section-->
+  <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 p-8 mt-12">
+    <!-- Category Card -->
+    <a href="sweaters.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+      <img src="assets\pexels-ron-lach-9594673.jpg" alt="Men Sweaters" class="w-full h-64 object-cover" />
+      <h3 class="mt-4 text-xl font-semibold">Men Sweaters</h3>
+      <p class="text-black-600"> PRODUCTS</p>
+    </a>
+  
+    <a href="shirts.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+      <img src="assets\pexels-rdne-5698865.jpg" alt="Men Shirts" class="w-full h-64 object-cover" />
+      <h3 class="mt-4 text-xl font-semibold">Men Shirts</h3>
+      <p class="text-black-600">PRODUCTS</p>
+    </a>
+  
+    <a href="trousers.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+      <img src="assets\pexels-mustapha-damilola-458083529-31220245.jpg" alt="Trousers" class="w-full h-64 object-cover" />
+      <h3 class="mt-4 text-xl font-semibold">Trousers</h3>
+      <p class="text-black-600"> PRODUCTS</p>
+    </a>
+  
+    <a href="shorts.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+      <img src="assets\pexels-budgeron-bach-5158820.jpg" alt="Men Shorts" class="w-full h-64 object-cover" />
+      <h3 class="mt-4 text-xl font-semibold">Men Shorts</h3>
+      <p class="text-black-600"> PRODUCTS</p>
+    </a>
+  
+    <a href="accesories.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+      <img src="assets\pexels-rdne-5699104.jpg" alt="Men Accessories " class="w-full h-64 object-cover" />
+      <h3 class="mt-4 text-xl font-semibold">Men Accesories</h3>
+      <p class="text-black-600"> PRODUCTS</p>
+    </a>
+  
+    <a href="undergaments.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+      <img src="assets\Screenshot 2025-03-23 140946.png" alt="Men Undergaments" class="w-full h-64 object-cover" />
+      <h3 class="mt-4 text-xl font-semibold"> Men Undergaments</h3>
+      <p class="text-black-600"> PRODUCTS</p>
+    </a>
+  
+  <a href="menshoes.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <img src="assets\Zola Men's Low Top Casual Sneakers - Cafe _ 43.jpeg" alt="menshoes.html" class="w-full h-64 object-cover" />
+    <h3 class="mt-4 text-xl font-semibold"> Men Shoes</h3>
+    <p class="text-black-600"> PRODUCTS</p>
+  </a>
+</div>
+</div>
+
+<!---Footer Section-->
+<footer class="bg-gray-900 text-white py-8">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <!--About Section-->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">About</h3>
+      <p class="text-gray-400">Our boutique is designed to provide a personalized and immersive shopping experience, combining sleek, contemporary interiors with advanced technology for your convenience.</p>
+   </div>  
+     <!--Quick Links-->
+     <div>
+      <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+      <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+          <li><a href="shop.html" class="text-gray-400 hover:text-white transition">Shop</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+       </ul>
+     </div>
+     <!--Contact Section-->
+     <div>
+      <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+      <p class="text-gray-400">Email:jeremianarthrifts@gmail.com</p>
+      <p class="text-gray-400">Phone: +254793947439</p>
+  </div>
+  <div>
+      <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+      <div class="flex space-x-4">
+        <a href="https://github.com/Jeremy-waweru10/CAPSTONE-1.git" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/_.j.eremiana?igsh=Mm95b3NxaXRiNXQ1&utm_source=qr" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.tiktok.com/@.j.eremiana?_t=ZM-8v2EOV2bu9H&_r=1" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></i></a>
+        <a href="index.html" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+        
+      </div>
+  </body>
+</html>
+      
+  
+  
+
+
+        
