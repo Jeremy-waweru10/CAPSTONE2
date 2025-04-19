@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEREMIANA'S THRIFT STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7ec3af2eb5.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+
+          <!-- Logo -->
+          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-6">
+              <a href="index.html" class="hover:text-red-500">Home</a>
+              <a href="shop.html" class="hover:text-red-500">Shop</a>
+              <a href="about.html" class="hover:text-red-500">About</a>
+              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+              <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                  0
+                </span>
+              </a>
+              <a href="signup.html" class="text-white hover:text-gray-500 transition">
+              <i class="fa-solid fa-user"></i>
+                 </a>
+              
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+          </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+          <a href="index.html" class="block hover:text-red-500">Home</a>
+          <a href="shop.html" class="block hover:text-red-500">Shop</a>
+          <a href="about.html" class="block hover:text-red-500">About</a>
+          <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+      </nav>
+  </header>
+
+    <!-- Products Grid -->
+     <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-8 gap-8 mt-12 ">
+        <!-- Product 1 -->
+        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+          <img src="assets\GURUNVANI Patchwork Sweater Mens Colorblock Jumper Cable Knitted Pullover Oversized.jpeg" alt="Crewneck Sweater" class="w-full h-64 object-contain">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Crewneck Sweater</h3>
+            <p class="text-black-600 mt-2 font-semibold">2700/=</p>
+            <button onclick="addToCart('Crewneck Sweater', 2700)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+    
+        <!-- Product 2 -->
+      <div class="mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src="assets\Men's V-Neck Sweaters _ Simons US.jpeg" alt="V-Neck Sweater" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold"> V-Neck Sweater</h3>
+          <p class="text-black-600 mt-2 font-semibold">2500/=</p>
+          <button onclick="addToCart('V-Neck Sweater', 1400)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!--Product 3-->
+      <div class =" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
+        <img src = "assets\GRACE KARIN Men's Turtneck Pullover Sweaters Long Sleeve Solid Color Twisted Knit Sweater.jpeg" alt="Turtleneck Sweater" class="w-full h-64 object-contain">
+        <div class = "p-6">
+            <h3 class="text-xl font-semibold">Turtleneck Sweater</h3>
+          <p class="text-black-600 mt-2 font-semibold ">2800/=</p>
+          <button onclick="addToCart('Turtleneck Sweater', 2800)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!--Product 4-->
+      <div class = " mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src = "assets\Loose Knitted Cardigan - black _ XXL.jpeg" alt="Cardigan" class="w-full h-64 object-contain">
+        <div class = "p-6">
+            <h3 class="text-xl font-semibold">Cardigan</h3>
+            <p class="text-black-600 mt-2 font-semibold">2850/=</p>
+            <button onclick="addToCart('Cardigan', 2850)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+       
+        <!-- Product 5 -->
+        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+          <img src="assets\MEN'S ICELANDIC SWEATER.jpeg" alt="Hooded Sweater" class="w-full h-64 object-contain">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Hooded Sweater</h3>
+            <p class="text-black-600 mt-2 font-semibold">2300/=</p>
+            <button onclick="addToCart('Hooded Sweater', 2300)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+
+         <!-- Product 6 -->
+      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src="assets\Cashmere cable-knit V-neck cricket sweater.jpeg" alt="Cable-Knit Sweater" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Cable-Knit Sweater</h3>
+          <p class="text-black-600 mt-2 font-semibold">2250/=</p>
+          <button onclick="addToCart('Cable-Knit Sweater', 2250)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    
+
+       <!-- Product 7 -->
+      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src="assets\Men Striped Pattern Cable Knit Sweater Vest.jpeg" alt="Sweater Vest" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Sweater Vest</h3>
+          <p class="text-black-600 mt-2 font-semibold">2000/=</p>
+          <button onclick="addToCart('Sweater Vest', 2000)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+  
+    <!-- Product 8 -->
+    <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src="assets\HOYUFEI Mens Corduroy Shirt Lapel Collar Button Up Pullover Mock Neck Long Sleeve Sweaters Polo Sweatshirts with Elbow Patches - Walmart_com.jpeg" alt="Mock Neck Sweater" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Mock Neck Sweater</h3>
+          <p class="text-black-600 mt-2 font-semibold">2750/=</p>
+          <button onclick="addToCart('Mock Neck Sweater', 2750)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    
+
+     <!-- Product 9 -->
+     <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src="assets\Men's Wharf Zip Sweater.jpeg" alt="Fisherman Sweater" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Fisherman Sweater</h3>
+          <p class="text-black-600 mt-2 font-semibold">3000/=</p>
+          <button onclick="addToCart('Fisherman Sweater', 3000)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+      
+        </div>
+      </div>
+    
+      
+     <!-- Product 10 -->
+     <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <img src="assets\abercrombie & fitch sweatshirt.jpeg" alt="Satchel Bag" class="w-full h-64 object-contain">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold">Half-Zip Sweater</h3>
+        <p class="text-black-600 mt-2 font-semibold">2250/=</p>
+        <button onclick="addToCart('Half-Zip Sweater', 2250)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+      </div>
+    </div>
+  
+     
+  <!-- Product 11 -->
+  <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+   <img src="assets\Cable-Knit Cotton Sweater _ Ralph Lauren.jpeg" alt="Polo Sweater" class="w-full h-64 object-contain">
+   <div class="p-6">
+     <h3 class="text-xl font-semibold">Polo Sweater</h3>
+     <p class="text-black-600 mt-2 font-semibold">2100/=</p>
+     <button onclick="addToCart('Polo Sweater', 2100)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+   </div>
+  </div>
+ 
+
+   <!-- Product 12 -->
+  <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <img src="assets\Winter Sweater Men Streetwear Casual Sweaters Warm Pullovers Fleeced Knitwear.jpeg" alt="Oversized Sweater" class="w-full h-64 object-contain">
+    <div class="p-6">
+      <h3 class="text-xl font-semibold">Oversized Sweater</h3>
+      <p class="text-black-600 mt-2 font-semibold">2900/=</p>
+      <button onclick="addToCart('Oversized Sweater', 1400)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+    </div>
+   </div>
+  </div>
+</div>
+     
+    </div>
+
+    <!---Footer Section-->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <!--About Section-->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">About</h3>
+          <p class="text-gray-400">Our boutique is designed to provide a personalized and immersive shopping experience, combining sleek, contemporary interiors with advanced technology for your convenience.</p>
+       </div>  
+         <!--Quick Links-->
+         <div>
+          <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+          <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+              <li><a href="shop.html" class="text-gray-400 hover:text-white transition">Shop</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+           </ul>
+         </div>
+         <!--Contact Section-->
+         <div>
+          <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+          <p class="text-gray-400">Email:jeremianarthrifts@gmail.com</p>
+          <p class="text-gray-400">Phone: +254793947439</p>
+      </div>
+      <div>
+          <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="https://github.com/Jeremy-waweru10/CAPSTONE-1.git" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/_.j.eremiana?igsh=Mm95b3NxaXRiNXQ1&utm_source=qr" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.tiktok.com/@.j.eremiana?_t=ZM-8v2EOV2bu9H&_r=1" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></i></a>
+            <a href="index.html" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+            
+
+          </div>
+        </body>
+        <script type="text/javascript" src="script.js"></script>
+</html>
