@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEREMIANA'S THRIFT STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7ec3af2eb5.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+
+          <!-- Logo -->
+          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-6">
+              <a href="index.html" class="hover:text-red-500">Home</a>
+              <a href="shop.html" class="hover:text-red-500">Shop</a>
+              <a href="about.html" class="hover:text-red-500">About</a>
+              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+              <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                  0
+                </span>
+              </a>
+              <a href="signup.html" class="text-white hover:text-gray-500 transition">
+              <i class="fa-solid fa-user"></i>
+                 </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+          </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+          <a href="index.html" class="block hover:text-red-500">Home</a>
+          <a href="shop.html" class="block hover:text-red-500">Shop</a>
+          <a href="about.html" class="block hover:text-red-500">About</a>
+          <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+      </nav>
+  </header>
+  
+    <!-- Products Grid -->
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-8 gap-8 mt-12 ">
+        <!-- Product 1 -->
+        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+          <img src="assets\2a354b1e-5415-423d-ae39-af504f8711a7.jpeg" alt="Boxer" class="w-full h-64 object-contain">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Boxer</h3>
+            <p class="text-black-600 mt-2 font-semibold">1800/=</p>
+            <button onclick="addToCart('Boxer', 1800)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+    
+        <!-- Product 2 -->
+      <div class="mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src="assets\Men's Cotton Boxer Shorts_ Soft, Breathable, Comfortable, YH12 _ CHINA _ S 55-65KG_1pc.jpeg" alt="Boxer brief" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Boxer brief</h3>
+          <p class="text-black-600 mt-2 font-semibold">1300/=</p>
+          <button onclick="addToCart('Boxer brief',1300 )" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!--Product 3-->
+      <div class =" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
+        <img src = "assets\5fd151ed-5b64-4044-8358-b2aec669f5dc.jpeg" alt="Briefs" class="w-full h-64 object-contain">
+        <div class = "p-6">
+            <h3 class="text-xl font-semibold">Briefs</h3>
+          <p class="text-black-600 mt-2 font-semibold">1000/=</p>
+          <button onclick="addToCart('Briefs', 1000)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!--Product 4-->
+      <div class = " mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src = "assets\Aaron Adkins (aaronadkins0104) - Profile _ Pinterest.jpeg" alt="Trunks" class="w-full h-64 object-contain">
+        <div class = "p-6">
+            <h3 class="text-xl font-semibold">Trunks</h3>
+            <p class="text-black-600 mt-2 font-semibold">1250/=</p>
+            <button onclick="addToCart('Trunks', 1250)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+       
+        <!-- Product 5 -->
+        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+          <img src="assets\Men's Ball Support Comfy Jockstraps - color 3 _ XL.jpeg" alt="Jockstraps" class="w-full h-64 object-contain">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Jockstraps</h3>
+            <p class="text-black-600 mt-2 font-semibold">1500/=</p>
+            <button onclick="addToCart('Jockstraps', 1500)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+
+         <!-- Product 6 -->
+      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <img src="assets\Men’s Under Armour Leggings 💪🏼.jpeg" alt="Leather Pants" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Thermal Underwear</h3>
+          <p class="text-black-600 mt-2 font-semibold">1200/=</p>
+          <button onclick="addToCart('Thermal Underwear', 1200)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+      <!---Footer Section-->
+      <footer class="bg-gray-900 text-white py-8">
+          <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!--About Section-->
+            <div>
+              <h3 class="text-lg font-semibold mb-2">About</h3>
+              <p class="text-gray-400">Our boutique is designed to provide a personalized and immersive shopping experience, combining sleek, contemporary interiors with advanced technology for your convenience.</p>
+           </div>  
+             <!--Quick Links-->
+             <div>
+              <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+              <ul class="space-y-2">
+                  <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                  <li><a href="shop.html" class="text-gray-400 hover:text-white transition">Shop</a></li>
+                  <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                  <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+               </ul>
+             </div>
+             <!--Contact Section-->
+             <div>
+              <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+              <p class="text-gray-400">Email:jeremianarthrifts@gmail.com</p>
+              <p class="text-gray-400">Phone: +254793947439</p>
+          </div>
+          <div>
+              <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="https://github.com/Jeremy-waweru10/CAPSTONE-1.git" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_.j.eremiana?igsh=Mm95b3NxaXRiNXQ1&utm_source=qr" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.tiktok.com/@.j.eremiana?_t=ZM-8v2EOV2bu9H&_r=1" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></i></a>
+                <a href="index.html" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                
+              </div>
+              </body>
+              <script type="text/javascript" src="script.js"></script>
+  </html>
