@@ -12,49 +12,60 @@
 <body class="bg-gray-100 text-gray-900">
 
     
-    <!-- Header -->
-    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
-      <div class="container mx-auto flex justify-between items-center">
+ <!-- Header -->
+ <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+  <div class="container mx-auto flex justify-between items-center">
 
-          <!-- Logo -->
-          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+      <!-- Logo -->
+      <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-6">
-              <a href="index.html" class="hover:text-red-500">Home</a>
-              <a href="shop.html" class="hover:text-red-500">Shop</a>
-              <a href="about.html" class="hover:text-red-500">About</a>
-              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
-              <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
-                <i class="fa-solid fa-cart-shopping text-xl"></i>
-                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
-                  0
-                </span>
-              </a>
-              <a href="signup.html" class="text-white hover:text-gray-500 transition">
-              <i class="fa-solid fa-user"></i>
-                 </a>
-          </nav>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex flex justify-center space-x-6">
+          <a href="index.html" class="hover:text-red-500">Home</a>
+          <a href="shop.html" class="hover:text-red-500">Shop</a>
+          <a href="about.html" class="hover:text-red-500">About</a>
+          <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+          
+          <!--Search-->
+          <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div>
 
-          <!-- Mobile Menu Button -->
-          <button id="menu-btn" class="md:hidden focus:outline-none">
-              <i class="fas fa-bars text-2xl"></i>
-          </button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
-          <a href="index.html" class="block hover:text-red-500">Home</a>
-          <a href="shop.html" class="block hover:text-red-500">Shop</a>
-          <a href="about.html" class="block hover:text-red-500">About</a>
-          <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+          <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+              <i class="fa-solid fa-cart-shopping text-xl"></i>
+              <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                0
+              </span>
+            </a>
+            
+     <a href="signup.html" class="text-white hover:text-gray-500 transition">
+     <i class="fa-solid fa-user"></i>
+        </a>
+          
       </nav>
-  </header>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+      </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+      <a href="index.html" class="block hover:text-red-500">Home</a>
+      <a href="shop.html" class="block hover:text-red-500">Shop</a>
+      <a href="about.html" class="block hover:text-red-500">About</a>
+      <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+      
+  </nav>
+</header>
+
   
     <!-- Products Grid -->
     <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-8 gap-8 mt-12 ">
         <!-- Product 1 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class=" product-item  mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Boxer">
           <img src="assets\2a354b1e-5415-423d-ae39-af504f8711a7.jpeg" alt="Boxer" class="w-full h-64 object-contain">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Boxer</h3>
@@ -64,7 +75,7 @@
         </div>
     
         <!-- Product 2 -->
-      <div class="mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Boxer brief">
         <img src="assets\Men's Cotton Boxer Shorts_ Soft, Breathable, Comfortable, YH12 _ CHINA _ S 55-65KG_1pc.jpeg" alt="Boxer brief" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Boxer brief</h3>
@@ -74,7 +85,7 @@
       </div>
 
       <!--Product 3-->
-      <div class =" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
+      <div class =" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Briefs">
         <img src = "assets\5fd151ed-5b64-4044-8358-b2aec669f5dc.jpeg" alt="Briefs" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Briefs</h3>
@@ -84,7 +95,7 @@
       </div>
 
       <!--Product 4-->
-      <div class = " mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class = " product-item mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Trunks">
         <img src = "assets\Aaron Adkins (aaronadkins0104) - Profile _ Pinterest.jpeg" alt="Trunks" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Trunks</h3>
@@ -94,8 +105,8 @@
         </div>
        
         <!-- Product 5 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
-          <img src="assets\Men's Ball Support Comfy Jockstraps - color 3 _ XL.jpeg" alt="Jockstraps" class="w-full h-64 object-contain">
+        <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Jockstraps">
+          <img src="assets\Men's Ball Support Comfy Jockstraps - color 3 _ XL.jpeg" alt="Jockstraps" class="w-full h-64 object-contain" >
           <div class="p-6">
             <h3 class="text-xl font-semibold">Jockstraps</h3>
             <p class="text-black-600 mt-2 font-semibold">1500/=</p>
@@ -104,7 +115,7 @@
         </div>
 
          <!-- Product 6 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Thermal Underwear">
         <img src="assets\Men’s Under Armour Leggings 💪🏼.jpeg" alt="Leather Pants" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Thermal Underwear</h3>
@@ -113,6 +124,11 @@
         </div>
       </div>
     </div>
+
+     <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
 
       <!---Footer Section-->
       <footer class="bg-gray-900 text-white py-8">

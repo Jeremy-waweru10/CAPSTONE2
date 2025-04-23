@@ -20,20 +20,28 @@
           <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
           <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-6">
+          <nav class="hidden md:flex flex justify-center space-x-6">
               <a href="index.html" class="hover:text-red-500">Home</a>
               <a href="shop.html" class="hover:text-red-500">Shop</a>
               <a href="about.html" class="hover:text-red-500">About</a>
               <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+
+          <!--Search-->
+          <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div> 
+                 
               <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
-                <i class="fa-solid fa-cart-shopping text-xl"></i>
-                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
-                  0
-                </span>
-              </a>
-              <a href="signup.html" class="text-white hover:text-gray-500 transition">
-              <i class="fa-solid fa-user"></i>
-                 </a>
+                  <i class="fa-solid fa-cart-shopping text-xl"></i>
+                  <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                    0
+                  </span>
+                </a>
+                
+         <a href="signup.html" class="text-white hover:text-gray-500 transition">
+         <i class="fa-solid fa-user"></i>
+            </a>
               
           </nav>
 
@@ -49,13 +57,15 @@
           <a href="shop.html" class="block hover:text-red-500">Shop</a>
           <a href="about.html" class="block hover:text-red-500">About</a>
           <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+          
       </nav>
   </header>
+  
 
     <!-- Products Grid -->
      <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-8 gap-8 mt-12 ">
         <!-- Product 1 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Crewneck Sweater">
           <img src="assets\GURUNVANI Patchwork Sweater Mens Colorblock Jumper Cable Knitted Pullover Oversized.jpeg" alt="Crewneck Sweater" class="w-full h-64 object-contain">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Crewneck Sweater</h3>
@@ -65,7 +75,7 @@
         </div>
     
         <!-- Product 2 -->
-      <div class="mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name=" V-Neck Sweater">
         <img src="assets\Men's V-Neck Sweaters _ Simons US.jpeg" alt="V-Neck Sweater" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold"> V-Neck Sweater</h3>
@@ -75,7 +85,7 @@
       </div>
 
       <!--Product 3-->
-      <div class =" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
+      <div class =" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Turtleneck Sweater">
         <img src = "assets\GRACE KARIN Men's Turtneck Pullover Sweaters Long Sleeve Solid Color Twisted Knit Sweater.jpeg" alt="Turtleneck Sweater" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Turtleneck Sweater</h3>
@@ -85,7 +95,7 @@
       </div>
 
       <!--Product 4-->
-      <div class = " mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class = " product-item mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Cardigan">
         <img src = "assets\Loose Knitted Cardigan - black _ XXL.jpeg" alt="Cardigan" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Cardigan</h3>
@@ -95,7 +105,7 @@
         </div>
        
         <!-- Product 5 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class="product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Hooded Sweater">
           <img src="assets\MEN'S ICELANDIC SWEATER.jpeg" alt="Hooded Sweater" class="w-full h-64 object-contain">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Hooded Sweater</h3>
@@ -105,7 +115,7 @@
         </div>
 
          <!-- Product 6 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Cable-Knit Sweater">
         <img src="assets\Cashmere cable-knit V-neck cricket sweater.jpeg" alt="Cable-Knit Sweater" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Cable-Knit Sweater</h3>
@@ -116,7 +126,7 @@
     
 
        <!-- Product 7 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class="product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Sweater Vest">
         <img src="assets\Men Striped Pattern Cable Knit Sweater Vest.jpeg" alt="Sweater Vest" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Sweater Vest</h3>
@@ -126,7 +136,7 @@
       </div>
   
     <!-- Product 8 -->
-    <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Mock Neck Sweater">
         <img src="assets\HOYUFEI Mens Corduroy Shirt Lapel Collar Button Up Pullover Mock Neck Long Sleeve Sweaters Polo Sweatshirts with Elbow Patches - Walmart_com.jpeg" alt="Mock Neck Sweater" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Mock Neck Sweater</h3>
@@ -137,7 +147,7 @@
     
 
      <!-- Product 9 -->
-     <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+     <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Fisherman Sweater">
         <img src="assets\Men's Wharf Zip Sweater.jpeg" alt="Fisherman Sweater" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Fisherman Sweater</h3>
@@ -149,7 +159,7 @@
     
       
      <!-- Product 10 -->
-     <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+     <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Half-Zip Sweater">
       <img src="assets\abercrombie & fitch sweatshirt.jpeg" alt="Satchel Bag" class="w-full h-64 object-contain">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Half-Zip Sweater</h3>
@@ -160,7 +170,7 @@
   
      
   <!-- Product 11 -->
-  <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+  <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Polo Sweater">
    <img src="assets\Cable-Knit Cotton Sweater _ Ralph Lauren.jpeg" alt="Polo Sweater" class="w-full h-64 object-contain">
    <div class="p-6">
      <h3 class="text-xl font-semibold">Polo Sweater</h3>
@@ -171,7 +181,7 @@
  
 
    <!-- Product 12 -->
-  <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+  <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Oversized Sweater">
     <img src="assets\Winter Sweater Men Streetwear Casual Sweaters Warm Pullovers Fleeced Knitwear.jpeg" alt="Oversized Sweater" class="w-full h-64 object-contain">
     <div class="p-6">
       <h3 class="text-xl font-semibold">Oversized Sweater</h3>
@@ -183,6 +193,11 @@
 </div>
      
     </div>
+
+     <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
 
     <!---Footer Section-->
     <footer class="bg-gray-900 text-white py-8">

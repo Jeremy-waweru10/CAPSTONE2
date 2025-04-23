@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEREMIANA'S THRIFT STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7ec3af2eb5.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    
+   <!-- Header -->
+   <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+
+        <!-- Logo -->
+        <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex flex justify-center space-x-6">
+            <a href="index.html" class="hover:text-red-500">Home</a>
+            <a href="shop.html" class="hover:text-red-500">Shop</a>
+            <a href="about.html" class="hover:text-red-500">About</a>
+            <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+
+            <!--Search-->
+          <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div> 
+               
+            <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                  0
+                </span>
+              </a>
+              
+       <a href="signup.html" class="text-white hover:text-gray-500 transition">
+       <i class="fa-solid fa-user"></i>
+          </a>
+            
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+        <a href="index.html" class="block hover:text-red-500">Home</a>
+        <a href="shop.html" class="block hover:text-red-500">Shop</a>
+        <a href="about.html" class="block hover:text-red-500">About</a>
+        <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+        
+    </nav>
+</header>
+
+  
+
+    <!-- Products Grid -->
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-12 p-8 ">
+        <!-- Product 1 -->
+        <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="T-Shirts">
+          <img src="assets\Gildan Men's Crew T-Shirts, Multipack, Style G1100.jpeg" alt="T-Shirts" class="w-full h-64 object-contain">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">T-Shirts</h3>
+            <p class="text-black-600 mt-2 font-semibold">1800/=</p>
+            <button onclick="addToCart('T-Shirts', 1800)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+    
+        <!-- Product 2 -->
+      <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Polo Shirts">
+        <img src="assets\Clothing for Women & Men _ Teen Clothing _ Hollister Co_.jpeg" alt="Polo Shirt" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Polo Shirt</h3>
+          <p class="text-black-600 mt-2 font-semibold">2000/=</p>
+          <button onclick="addToCart('Polo Shirt',2000 )" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button> 
+        </div>
+      </div>
+
+      <!--Product 3-->
+      <div class =" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Henley Shirt">
+        <img src = "assets\Men's Henley Shirt Short Sleeve Shirt Tee Top Solid Color Henley Outdoor Street Long Sleeve Button Clothing Apparel Fashion Daily.jpeg" alt="Henley Shirt" class="w-full h-64 object-contain">
+        <div class = "p-6">
+            <h3 class="text-xl font-semibold">Henley Shirt</h3>
+          <p class="text-black-600 mt-2 font-semibold">2200/=</p>
+          <button onclick="addToCart('Henley Shirt',2200 )" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <!--Product 4-->
+      <div class = " product-item mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Flannel Shirts">
+        <img src = "assets\Men's Flannel Single-Breasted Plaid Shirt - vanci_co.jpeg" alt="Flannel Shirts" class="w-full h-64 object-contain">
+        <div class = "p-6">
+            <h3 class="text-xl font-semibold">Flannel Shirts</h3>
+            <p class="text-blak-600 mt-2 font-semibold">2400/=</p>
+            <button onclick="addToCart('Flannel Shirts', 2400)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+       
+        <!-- Product 5 -->
+        <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Chambray Shirts">
+          <img src="assets\Chambray Cpo Shirt - Rinsed Indigo Chambray - Rinsed Indigo Chambray _ XL.jpeg" alt="Chambray Shirts" class="w-full h-64 object-contain">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Chambray Shirts</h3>
+            <p class="text-black-600 mt-2 font-semibold">1950/=</p>
+            <button onclick="addToCart('Chambray Shirts',1950 )" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+          </div>
+        </div>
+
+         <!-- Product 6 -->
+      <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Tuxedo Shirts">
+        <img src="assets\LUPURTY Mens Shirts Long Sleeve Regular Fit for Wedding Prom Business Casual Button Up Dress Shirt for Men.jpeg" alt="Tuxedo Shirts" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Tuxedo Shirts</h3>
+          <p class="text-black-600 mt-2 font-semibold">2700/=</p>
+          <button onclick="addToCart('Tuxedo Shirts', 2700)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    
+
+       <!-- Product 7 -->
+      <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Cuban Collar Shirts">
+        <img src="assets\Reiss Textured Crepe Cuban Collar Shirt in Soft Blue - REISS.jpeg" alt="Cuban Collar Shirts" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Cuban Collar Shirts</h3>
+          <p class="text-black-600 mt-2 font-semibold">2800/=</p>
+          <button onclick="addToCart('Cuban Collar Shirts', 2800)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+  
+    <!-- Product 8 -->
+    <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Linen Shirts">
+        <img src="assets\Men's Button T Shirt Linen Shirt T Shirt Henley Shirt Short Sleeve Henley Spring  Summer Plain Fashion Designer Basic Front Pocket Vacation Street Going out Navy Blue Light Grey Army Green Top Tee.jpeg" alt="Linen Shirts" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Linen Shirts</h3>
+          <p class="text-black-600 mt-2 font-semibold">2000/=</p>
+          <button onclick="addToCart('Linen Shirts', 2000)" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    
+
+     <!-- Product 9 -->
+     <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Shackets">
+        <img src="assets\Sherpa Shirt Jacket Flannel Shackets.jpeg" alt="Shackets" class="w-full h-64 object-contain">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Shackets</h3>
+          <p class="text-black-600 mt-2 font-semibold" >3000/=</p>
+          <button onclick="addToCart('Shackets',3000 )" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-amber-600 transition">Add to Cart</button>
+        </div>
+      </div>
+    
+      
+     </div> 
+     
+         <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
+
+     <!---Footer Section-->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <!--About Section-->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">About</h3>
+          <p class="text-gray-400">Our boutique is designed to provide a personalized and immersive shopping experience, combining sleek, contemporary interiors with advanced technology for your convenience.</p>
+       </div>  
+         <!--Quick Links-->
+         <div>
+          <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+          <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+              <li><a href="shop.html" class="text-gray-400 hover:text-white transition">Shop</a></li>
+              <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+           </ul>
+         </div>
+         <!--Contact Section-->
+         <div>
+          <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+          <p class="text-gray-400">Email:jeremianarthrifts@gmail.com</p>
+          <p class="text-gray-400">Phone: +254793947439</p>
+      </div>
+      <div>
+          <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="https://github.com/Jeremy-waweru10/CAPSTONE-1.git" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/_.j.eremiana?igsh=Mm95b3NxaXRiNXQ1&utm_source=qr" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.tiktok.com/@.j.eremiana?_t=ZM-8v2EOV2bu9H&_r=1" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></i></a>
+            <a href="index.html" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+            
+          </div>
+          </body>
+          <script type="text/javascript" src="script.js"></script>
+</html>

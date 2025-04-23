@@ -12,50 +12,61 @@
 <body class="bg-gray-100 text-gray-900">
 
     
-    <!-- Header -->
-    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
-      <div class="container mx-auto flex justify-between items-center">
+   <!-- Header -->
+   <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+    <div class="container mx-auto flex justify-between items-center">
 
-          <!-- Logo -->
-          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+        <!-- Logo -->
+        <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-6">
-              <a href="index.html" class="hover:text-red-500">Home</a>
-              <a href="shop.html" class="hover:text-red-500">Shop</a>
-              <a href="about.html" class="hover:text-red-500">About</a>
-              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
-              <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex flex justify-center space-x-6">
+            <a href="index.html" class="hover:text-red-500">Home</a>
+            <a href="shop.html" class="hover:text-red-500">Shop</a>
+            <a href="about.html" class="hover:text-red-500">About</a>
+            <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+        
+             <!--Search-->
+          <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div>
+               
+            <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
                 <i class="fa-solid fa-cart-shopping text-xl"></i>
                 <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
                   0
                 </span>
               </a>
-              <a href="signup.html" class="text-white hover:text-gray-500 transition">
-              <i class="fa-solid fa-user"></i>
-                 </a>
-          </nav>
+              
+       <a href="signup.html" class="text-white hover:text-gray-500 transition">
+       <i class="fa-solid fa-user"></i>
+          </a>
+            
+        </nav>
 
-          <!-- Mobile Menu Button -->
-          <button id="menu-btn" class="md:hidden focus:outline-none">
-              <i class="fas fa-bars text-2xl"></i>
-          </button>
-      </div>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
 
-      <!-- Mobile Navigation -->
-      <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
-          <a href="index.html" class="block hover:text-red-500">Home</a>
-          <a href="shop.html" class="block hover:text-red-500">Shop</a>
-          <a href="about.html" class="block hover:text-red-500">About</a>
-          <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
-      </nav>
-    </header>
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+        <a href="index.html" class="block hover:text-red-500">Home</a>
+        <a href="shop.html" class="block hover:text-red-500">Shop</a>
+        <a href="about.html" class="block hover:text-red-500">About</a>
+        <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+        
+    </nav>
+</header>
+
 
      <!-- Product Grid Section-->
   <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 p-8 mt-12">
 
     <!-- Product 1 -->
-    <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Baby Overall">
         <img src="assets\Babyjongen Decoratieve patch zak overall casual jumpsuit.jpeg" alt="Baby Overalls" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Baby Overalls</h3>
@@ -65,7 +76,7 @@
       </div>
   
       <!-- Product 2 -->
-    <div class="mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Sleep Sacks">
       <img src="assets\Kids Boys Girls 2-Piece Winter Fleece Pajamas Soft Fluffy Fleece Full-Zip Jacket Top+Pants Thick Warm Sleepwear Set Girl Clothes Winter.jpeg" alt="Sleep Slacks " class="w-full h-64 object-contain">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Sleep Sacks </h3>
@@ -75,7 +86,7 @@
     </div>
 
     <!--Product 3-->
-    <div class =" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
+    <div class =" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Baby Outwear">
       <img src = "assets\Babyjongen Decoratieve patch zak overall casual jumpsuit.jpeg" alt="Baby Outwear" class="w-full h-64 object-contain">
       <div class = "p-6">
           <h3 class="text-xl font-semibold">Baby Outwear</h3>
@@ -85,7 +96,7 @@
     </div>
 
     <!--Product 4-->
-    <div class = " mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class = " product-item mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Vest">
       <img src = "assets\Theodore Vest and Hat  Baby Cakes by Lisafdesign  Bc68  - Etsy.jpeg" alt="Vest" class="w-full h-64 object-contain">
       <div class = "p-6">
           <h3 class="text-xl font-semibold">Vest</h3>
@@ -95,7 +106,7 @@
       </div>
      
       <!-- Product 5 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Socks">
         <img src="assets\5 Pairs Baby Socks Low Cut Stretch Ankle Socks….jpeg" alt="Socks" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Socks</h3>
@@ -105,7 +116,7 @@
       </div>
 
        <!-- Product 6 -->
-    <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Sweaters">
       <img src="assets\Boys_Toddler Sweater 18M-6 Years - White _ 3-4Y 110.jpeg" alt="Sweaters" class="w-full h-64 object-contain">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Sweaters </h3>
@@ -116,7 +127,7 @@
   
 
      <!-- Product 7 -->
-    <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Themed Collections">
       <img src="assets\Magical Mickey Mouse 3-Piece Crib Bedding Set.jpeg" alt="Themed Collections" class="w-full h-64 object-contain">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Themed Collections</h3>
@@ -126,7 +137,7 @@
     </div>
 
   <!-- Product 8 -->
-  <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+  <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Kids Casual Wear">
       <img src="assets\2024 Kids' Fashion Guide_ Trendy Outfits for Stylish Boys and Girls.jpeg" alt="Kids Casual Wear" class="w-full h-64 object-contain">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Kids Casual Wear</h3>
@@ -137,7 +148,7 @@
   
 
    <!-- Product 9 -->
-   <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+   <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Kids Outwear">
       <img src="assets\Chaqueta de invierno muy cálida para niños de 4 a 14 años, abrigo de algodón con capucha grueso de terciopelo de longitud media para adolescentes, novedad de 2024 - AliExpress 1501 (3).jpeg" alt="Kids Outwear" class="w-full h-64 object-contain">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Kids Rompers</h3>
@@ -146,6 +157,10 @@
       </div>
     </div>
   </div>
+      <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
 
   <!---Footer Section-->
   <footer class="bg-gray-900 text-white py-8">

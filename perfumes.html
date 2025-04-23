@@ -12,49 +12,60 @@
 <body class="bg-gray-100 text-gray-900">
 
     
-    <!-- Header -->
-    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
-        <div class="container mx-auto flex justify-between items-center">
+<!-- Header -->
+<header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+    <div class="container mx-auto flex justify-between items-center">
 
-            <!-- Logo -->
-            <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+        <!-- Logo -->
+        <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-red-500">Home</a>
-                <a href="shop.html" class="hover:text-red-500">Shop</a>
-                <a href="about.html" class="hover:text-red-500">About</a>
-                <a href="contact.html" class="hover:text-red-500">Contact Us</a>
-                <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
-                  <i class="fa-solid fa-cart-shopping text-xl"></i>
-                  <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
-                    0
-                  </span>
-                <a href="signup.html" class="text-white hover:text-gray-500 transition">
-                <i class="fa-solid fa-user"></i>
-                   </a>
-            </nav>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex flex justify-center space-x-6">
+            <a href="index.html" class="hover:text-red-500">Home</a>
+            <a href="shop.html" class="hover:text-red-500">Shop</a>
+            <a href="about.html" class="hover:text-red-500">About</a>
+            <a href="contact.html" class="hover:text-red-500">Contact Us</a>
 
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
-            <a href="index.html" class="block hover:text-red-500">Home</a>
-            <a href="shop.html" class="block hover:text-red-500">Shop</a>
-            <a href="about.html" class="block hover:text-red-500">About</a>
-            <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+             <!--Search-->
+          <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div> 
+               
+            <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                  0
+                </span>
+              </a>
+              
+       <a href="signup.html" class="text-white hover:text-gray-500 transition">
+       <i class="fa-solid fa-user"></i>
+          </a>
+            
         </nav>
-    </header>
-  
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+        <a href="index.html" class="block hover:text-red-500">Home</a>
+        <a href="shop.html" class="block hover:text-red-500">Shop</a>
+        <a href="about.html" class="block hover:text-red-500">About</a>
+        <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+        
+    </nav>
+</header>
+
     
     <!-- Products Grid -->
     <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-12 ">
         <!-- Product 1 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Chanel">
           <img src="assets\CHANEL N5 EAU PREMIERE SPRAY - 3_4 oz_.jpeg" alt="Chanel" class="w-full h-64 object-contain">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Chanel</h3>
@@ -64,7 +75,7 @@
         </div>
     
         <!-- Product 2 -->
-      <div class="mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Dior">
         <img src="assets\Dior Homme (Eau de Toilette) Samples for men by Christian Dior.jpeg" alt="Dior" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold"> Dior</h3>
@@ -74,7 +85,7 @@
       </div>
 
       <!--Product 3-->
-      <div class =" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
+      <div class =" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Gucci">
         <img src = "assets\Gucci Bloom Eau de Parfum.jpeg" alt="Gucci" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Gucci</h3>
@@ -84,7 +95,7 @@
       </div>
 
       <!--Product 4-->
-      <div class = " mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class = " product-item mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Yves Saint Laurent">
         <img src = "assets\Ysl Y By Yves Saint Laurent 3_3oz Edp For Men Sealed Box.jpeg" alt="Yves Saint Laurent" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Yves Saint Laurent</h3>
@@ -94,7 +105,7 @@
         </div>
        
         <!-- Product 5 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Maison Margiela">
           <img src="assets\Maison Margiela On a Date Eau de Toilette _ Space NK.jpeg" alt="Maison Margiela" class="w-full h-64 object-contain">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Maison Margiela</h3>
@@ -104,7 +115,7 @@
         </div>
 
          <!-- Product 6 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Tom Ford ">
         <img src="assets\06ad4d9f-9b59-4a82-b6ba-a7af796f7de1.jpeg" alt="Tom Ford " class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Tom Ford </h3>
@@ -115,7 +126,7 @@
     
 
        <!-- Product 7 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class="product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Creed">
         <img src="assets\CREED Millesime Imperial 3_3 oz Eau de Parfum Spray.jpeg" alt="Creed" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Creed</h3>
@@ -125,7 +136,7 @@
       </div>
   
     <!-- Product 8 -->
-    <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Body Axe">
         <img src="assets\FREE + Money Maker AXE starting 10_08.jpeg" alt=" Body Axe" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold"> Body Axe</h3>
@@ -136,7 +147,7 @@
     
 
      <!-- Product 9 -->
-     <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+     <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Calvin Klein CK One EDT">
         <img src="assets\🚨O SEGREDO DE SEDUÇÃO DO OLIVER DO TESTE DE FIDELIDADE.jpeg" alt="Calvin Klein CK One EDT" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Calvin Klein CK One EDT</h3>
@@ -147,7 +158,7 @@
     
       
      <!-- Product 10 -->
-     <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+     <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Armaf Shades Wood">
       <img src="assets\Armaf Shades Wood Long Lasting Eau De Toilette Fragrance Spray 100ml.jpeg" alt="Armaf Shades Wood" class="w-full h-64 object-contain">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Armaf Shades Wood</h3>
@@ -158,7 +169,7 @@
   
      
   <!-- Product 11 -->
-  <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+  <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Tom Ford Oud Wood EDP">
    <img src="assets\Tom Ford Private Blend Oud Wood Eau de Parfum Spray 100ml.jpeg" alt="Tom Ford Oud Wood EDP" class="w-full h-64 object-contain">
    <div class="p-6">
      <h3 class="text-xl font-semibold">Tom Ford Oud Wood EDP</h3>
@@ -169,7 +180,7 @@
  
 
    <!-- Product 12 -->
-  <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+  <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Parfums de Marly Layton EDP">
     <img src="assets\ad eBay - Parfums de Marly Layton by Parfums de Marly, 4_2 oz EDP Spray for Men.jpeg" alt="Parfums de Marly Layton EDP" class="w-full h-64 object-contain">
     <div class="p-6">
       <h3 class="text-xl font-semibold">Parfums de Marly Layton EDP</h3>
@@ -181,6 +192,11 @@
 </div>
      
     </div>
+
+        <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
 
       <!---Footer Section-->
       <footer class="bg-gray-900 text-white py-8">

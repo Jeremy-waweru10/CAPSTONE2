@@ -12,50 +12,61 @@
 <body class="bg-gray-100 text-gray-900">
 
     
-    <!-- Header -->
-    <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
-      <div class="container mx-auto flex justify-between items-center">
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+    <div class="container mx-auto flex justify-between items-center">
 
-          <!-- Logo -->
-          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+        <!-- Logo -->
+        <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-6">
-              <a href="index.html" class="hover:text-red-500">Home</a>
-              <a href="shop.html" class="hover:text-red-500">Shop</a>
-              <a href="about.html" class="hover:text-red-500">About</a>
-              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
-              <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex flex justify-center space-x-6">
+            <a href="index.html" class="hover:text-red-500">Home</a>
+            <a href="shop.html" class="hover:text-red-500">Shop</a>
+            <a href="about.html" class="hover:text-red-500">About</a>
+            <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+
+              <!--Search-->
+          <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div> 
+               
+            <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
                 <i class="fa-solid fa-cart-shopping text-xl"></i>
                 <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
                   0
                 </span>
               </a>
-              <a href="signup.html" class="text-white hover:text-gray-500 transition">
-              <i class="fa-solid fa-user"></i>
-                 </a>
-          </nav>
+              
+       <a href="signup.html" class="text-white hover:text-gray-500 transition">
+       <i class="fa-solid fa-user"></i>
+          </a>
+            
+        </nav>
 
-          <!-- Mobile Menu Button -->
-          <button id="menu-btn" class="md:hidden focus:outline-none">
-              <i class="fas fa-bars text-2xl"></i>
-          </button>
-      </div>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
 
-      <!-- Mobile Navigation -->
-      <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
-          <a href="index.html" class="block hover:text-red-500">Home</a>
-          <a href="shop.html" class="block hover:text-red-500">Shop</a>
-          <a href="about.html" class="block hover:text-red-500">About</a>
-          <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
-      </nav>
-  </header>
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+        <a href="index.html" class="block hover:text-red-500">Home</a>
+        <a href="shop.html" class="block hover:text-red-500">Shop</a>
+        <a href="about.html" class="block hover:text-red-500">About</a>
+        <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+        
+    </nav>
+</header>
+
  
   
      <!-- Products Grid -->
     <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 p-8 mt-12 ">
         <!-- Product 1 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Oxford Shoes">
           <img src="assets\British Style Shiny Leather Thick Sole Business Casual Wedding Oxfords Sz Mens.jpeg" alt="Oxford Shoes" class="w-full h-64 object-contain">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Oxford Shoes</h3>
@@ -65,7 +76,7 @@
         </div>
     
         <!-- Product 2 -->
-      <div class="mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Derby Shoes">
         <img src="assets\Male Leather Shoes Men New Chunky Platform Retro Work Shoes Spring Autumn Derby Shoes Low Top Man Casual Flats - Black _ 41.jpeg" alt="Derby Shoes" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Derby Shoes</h3>
@@ -75,7 +86,7 @@
       </div>
 
       <!--Product 3-->
-      <div class =" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
+      <div class =" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Brogues">
         <img src = "assets\Black Hi-Shine 5 Eye Oxford Brogue Shoe - UK 8_5.jpeg" alt="Brogues" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Brogues</h3>
@@ -85,7 +96,7 @@
       </div>
 
       <!--Product 4-->
-      <div class = " mb-6 mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class = " product-item mt-6 bg-whie rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Monk Sraps">
         <img src = "assets\Black Monk Strap Shoes….jpeg" alt="Monk Straps" class="w-full h-64 object-contain">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Monk Straps </h3>
@@ -95,7 +106,7 @@
         </div>
        
         <!-- Product 5 -->
-        <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Loafers">
           <img src="assets\mocassins en cuir verni noir pour hommes avec détails de pompons - chaussures habillées élégantes pour le bureau et les événements.jpeg" alt="Loafers " class="w-full h-64 object-contain">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Loafers </h3>
@@ -105,7 +116,7 @@
         </div>
 
          <!-- Product 6 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class="product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Sneakers">
         <img src="assets\55f6c40d-91a9-4c0b-9173-127023748389.jpeg" alt="Sneakers" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Sneakers</h3>
@@ -116,7 +127,7 @@
     
 
        <!-- Product 7 -->
-      <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Running Shoes">
         <img src="assets\Fashion Colorblock Lace-up Sneakers For Men Breathable Low-top Dad Sho.jpeg" alt="Running Shoes " class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Running Shoes </h3>
@@ -126,7 +137,7 @@
       </div>
   
     <!-- Product 8 -->
-    <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class=" product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Chelsea Boots">
         <img src="assets\Men Shoes.jpeg" alt="Chelsea Boots" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Chelsea Boots</h3>
@@ -137,7 +148,7 @@
     
 
      <!-- Product 9 -->
-     <div class=" mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+     <div class=" product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Casual Shoes">
         <img src="assets\Winter Leather Shoes_Comfortable Sneakers - Black plush _ 7 (1).jpeg" alt="Casual Shoes" class="w-full h-64 object-contain">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Casual Shoes</h3>
@@ -148,6 +159,12 @@
     
       
      </div>
+
+         <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
+
      <!---Footer Section-->
     <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

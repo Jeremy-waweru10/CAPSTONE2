@@ -50,4 +50,36 @@ function addToCart(productName, price) {
   
   // Call the updateCartCount function when the page loads to ensure the cart count is updated
   window.addEventListener('DOMContentLoaded', updateCartCount);
+
+  //Search functionality
+  const searchInput = document.getElementById('searchInput');
+const products = document.querySelectorAll('.product-item');
+const noResults = document.getElementById('no-results');
+
+searchInput.addEventListener('keyup', filterProducts); // 👈 live search
+document.getElementById('searchButton').addEventListener('click', filterProducts); // still works with button too
+
+function filterProducts() {
+  const query = searchInput.value.toLowerCase();
+  let anyVisible = false;
+
+  products.forEach(product => {
+    const name = product.dataset.name.toLowerCase();
+    if (name.includes(query)) {
+      product.style.display = 'block';
+      anyVisible = true;
+    } else {
+      product.style.display = 'none';
+    }
+  });
+
+  // Show or hide "No results found"
+  if (anyVisible) {
+    noResults.classList.add('hidden');
+  } else {
+    noResults.classList.remove('hidden');
+  }
+}
+
+ 
   

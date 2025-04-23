@@ -13,47 +13,59 @@
 
     <!-- Header -->
     <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
-      <div class="container mx-auto flex justify-between items-center">
+        <div class="container mx-auto flex justify-between items-center">
 
-          <!-- Logo -->
-          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+            <!-- Logo -->
+            <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-6">
-              <a href="index.html" class="hover:text-red-500">Home</a>
-              <a href="shop.html" class="hover:text-red-500">Shop</a>
-              <a href="about.html" class="hover:text-red-500">About</a>
-              <a href="contact.html" class="hover:text-red-500">Contact Us</a>
-              <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
-                <i class="fa-solid fa-cart-shopping text-xl"></i>
-                <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
-                  0
-                </span>
-              <a href="signup.html" class="text-white hover:text-gray-500 transition">
-              <i class="fa-solid fa-user"></i>
-                 </a>
-          </nav>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex flex justify-center space-x-6">
+                <a href="index.html" class="hover:text-red-500">Home</a>
+                <a href="shop.html" class="hover:text-red-500">Shop</a>
+                <a href="about.html" class="hover:text-red-500">About</a>
+                <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+          
+                <!--Search-->
+          <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div>
+               
+                   
+                <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                      0
+                    </span>
+                  </a>
+                  
+           <a href="signup.html" class="text-white hover:text-gray-500 transition">
+           <i class="fa-solid fa-user"></i>
+              </a>
+                
+            </nav>
 
-          <!-- Mobile Menu Button -->
-          <button id="menu-btn" class="md:hidden focus:outline-none">
-              <i class="fas fa-bars text-2xl"></i>
-          </button>
-      </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
 
-      <!-- Mobile Navigation -->
-      <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
-          <a href="index.html" class="block hover:text-red-500">Home</a>
-          <a href="shop.html" class="block hover:text-red-500">Shop</a>
-          <a href="about.html" class="block hover:text-red-500">About</a>
-          <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
-      </nav>
-  </header>
-
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+            <a href="index.html" class="block hover:text-red-500">Home</a>
+            <a href="shop.html" class="block hover:text-red-500">Shop</a>
+            <a href="about.html" class="block hover:text-red-500">About</a>
+            <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+            
+        </nav>
+    </header>
+    
 
      <!-- Products Grid -->
      <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 p-8 mt-12">
         <!-- Product 1 -->
-        <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class = " product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Leather Backpack">
           <img src="assets\pexels-taryn-elliott-4973655.jpg" alt="Leather Backpack" class="w-full h-64 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Leather Backpack</h3>
@@ -63,7 +75,7 @@
         </div>
     
         <!-- Product 2 -->
-        <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class = " product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Travel Duffel Bag">
         <img src="assets\pexels-woodysmedia-2858691-4485575.jpg" alt="Travel Duffel Bag" class="w-full h-64 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Travel Duffel Bag</h3>
@@ -73,7 +85,7 @@
       </div>
 
       <!--Product 3-->
-      <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class = "product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Canva Tote Bag">
         <img src = "assets\pexels-dom-j-7304-45981.jpg" alt="Canva Tote Bag" class="w-full h-64 object-cover">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Canva Tote Bag</h3>
@@ -83,7 +95,7 @@
       </div>
 
       <!--Product 4-->
-      <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <div class = " product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Messenger Bag">
         <img src = "assets\pexels-theplanetspeaks-11623262.jpg" alt="Messenger Bag" class="w-full h-64 object-cover">
         <div class = "p-6">
             <h3 class="text-xl font-semibold">Messenger Bag</h3>
@@ -93,7 +105,7 @@
         </div>
        
         <!-- Product 5 -->
-        <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+        <div class = " product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Laptop Backpack">
           <img src="assets\pexels-nappy-936081.jpg" alt="Laptop Backpack" class="w-full h-64 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Laptop Backpack</h3>
@@ -103,7 +115,7 @@
         </div>
 
          <!-- Product 6 -->
-         <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+         <div class = "product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Weekender Bag">
         <img src="assets\pexels-didsss-1447474.jpg " alt="Weekender Bag" class="w-full h-64 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Weekender Bag</h3>
@@ -114,7 +126,7 @@
     
 
        <!-- Product 7 -->
-       <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+       <div class = "product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Crossbody Bag">
         <img src="assets\pexels-ron-lach-8346025.jpg" alt="Crossbody Bag" class="w-full h-64 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Crossbody Bag</h3>
@@ -124,7 +136,7 @@
       </div>
   
     <!-- Product 8 -->
-    <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+    <div class = " product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Gym Bag">
         <img src="assets\pexels-olly-3764401.jpg" alt="Gym Bag" class="w-full h-64 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Gym Bag</h3>
@@ -135,7 +147,7 @@
     
 
      <!-- Product 9 -->
-     <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+     <div class = "product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Dawstring Bag">
         <img src="assets\pexels-matreding-31173354.jpg" alt="Dawstring Bag" class="w-full h-64 object-cover">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Dawstring Bag</h3>
@@ -146,7 +158,7 @@
     
       
      <!-- Product 10 -->
-     <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+     <div class = " product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Satchel Bag">
       <img src="assets\pexels-the-baggify-secrets-2150393322-31226316.jpg" alt="Satchel Bag" class="w-full h-64 object-cover">
       <div class="p-6">
         <h3 class="text-xl font-semibold">Satchel Bag</h3>
@@ -157,7 +169,7 @@
   
      
   <!-- Product 11 -->
-  <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+  <div class = " product-item mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Hobo Bag">
    <img src="assets\pexels-borevina-1778412.jpg" alt="Hobo Bag" class="w-full h-64 object-cover">
    <div class="p-6">
      <h3 class="text-xl font-semibold">Hobo Bag</h3>
@@ -168,7 +180,7 @@
  
 
    <!-- Product 11 -->
-   <div class = " mb-6 mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+   <div class = " product-item mt-6 bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105" data-name="Bucket Bag">
     <img src="assets\pexels-jose-martin-segura-benites-1422456152-27046146.jpg" alt="Bucket Bag" class="w-full h-64 object-cover">
     <div class="p-6">
       <h3 class="text-xl font-semibold">Bucket Bag</h3>
@@ -181,6 +193,12 @@
 </div>
      
     </div>
+
+        <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
+
 
     <!---Footer Section-->
     <footer class="bg-gray-900 text-white py-8">

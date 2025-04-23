@@ -9,45 +9,53 @@
 </head>
 
 <body  class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
+  <div class="container mx-auto flex justify-between items-center">
 
-     <!-- Header -->
-     <header class="fixed top-0 w-full bg-gray-900 text-white px-8 py-4 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-  
-            <!-- Logo -->
-            <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
-  
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-red-500">Home</a>
-                <a href="shop.html" class="hover:text-red-500">Shop</a>
-                <a href="about.html" class="hover:text-red-500">About</a>
-                <a href="contact.html" class="hover:text-red-500">Contact Us</a>
-                <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
-                    <i class="fa-solid fa-cart-shopping text-xl"></i>
-                    <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
-                      0
-                    </span>
-                  </a>
-                <a href="signup.html" class="text-white hover:text-gray-500 transition">
-                <i class="fa-solid fa-user"></i>
-                   </a>
-            </nav>
-  
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-  
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
-            <a href="index.html" class="block hover:text-red-500">Home</a>
-            <a href="shop.html" class="block hover:text-red-500">Shop</a>
-            <a href="about.html" class="block hover:text-red-500">About</a>
-            <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
-        </nav>
-    </header>
+      <!-- Logo -->
+      <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex flex justify-center space-x-6">
+          <a href="index.html" class="hover:text-red-500">Home</a>
+          <a href="shop.html" class="hover:text-red-500">Shop</a>
+          <a href="about.html" class="hover:text-red-500">About</a>
+          <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+
+          <div class="hidden md:flex items-center space-x-4">
+              <input type="text" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+              <button class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+             
+          <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
+              <i class="fa-solid fa-cart-shopping text-xl"></i>
+              <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                0
+              </span>
+            </a>
+            
+     <a href="signup.html" class="text-white hover:text-gray-500 transition">
+     <i class="fa-solid fa-user"></i>
+        </a>
+          
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+      </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden">
+      <a href="index.html" class="block hover:text-red-500">Home</a>
+      <a href="shop.html" class="block hover:text-red-500">Shop</a>
+      <a href="about.html" class="block hover:text-red-500">About</a>
+      <a href="contact.html" class="block hover:text-red-500">Contact Us</a>
+      
+  </nav>
+</header>
+
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
