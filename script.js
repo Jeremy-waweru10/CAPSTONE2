@@ -16,6 +16,8 @@ const menuBtn = document.getElementById('menu-btn');
         window.location.href = "index.html";
     }
 
+   
+
 // Function to add a product to the cart
 function addToCart(productName, price) {
     // Get the current cart from localStorage, or initialize an empty array if no cart exists
@@ -51,35 +53,37 @@ function addToCart(productName, price) {
   // Call the updateCartCount function when the page loads to ensure the cart count is updated
   window.addEventListener('DOMContentLoaded', updateCartCount);
 
+//Search functionality
+document.addEventListener('DOMContentLoaded', function () {
   //Search functionality
-  const searchInput = document.getElementById('searchInput');
-const products = document.querySelectorAll('.product-item');
-const noResults = document.getElementById('no-results');
+  const searchInput = document.getElementById('searchInput'); // grabs the search input box
+  const products = document.querySelectorAll('.product-item'); // grabs all product items on the page
+  const noResults = document.getElementById('no-results'); // grabs the “No results found” message element
 
-searchInput.addEventListener('keyup', filterProducts); // 👈 live search
-document.getElementById('searchButton').addEventListener('click', filterProducts); // still works with button too
+  searchInput.addEventListener('keyup', filterProducts); // live search
+  document.getElementById('searchButton').addEventListener('click', filterProducts); // button search
 
-function filterProducts() {
-  const query = searchInput.value.toLowerCase();
-  let anyVisible = false;
+  function filterProducts() {
+    const query = searchInput.value.toLowerCase();
+    let anyVisible = false;
 
-  products.forEach(product => {
-    const name = product.dataset.name.toLowerCase();
-    if (name.includes(query)) {
-      product.style.display = 'block';
-      anyVisible = true;
+    products.forEach(product => {
+      const name = product.dataset.name.toLowerCase();
+      if (name.includes(query)) {
+        product.style.display = 'block';
+        anyVisible = true;
+      } else {
+        product.style.display = 'none';
+      }
+    });
+
+    if (anyVisible) {
+      noResults.classList.add('hidden');
     } else {
-      product.style.display = 'none';
+      noResults.classList.remove('hidden');
     }
-  });
-
-  // Show or hide "No results found"
-  if (anyVisible) {
-    noResults.classList.add('hidden');
-  } else {
-    noResults.classList.remove('hidden');
   }
-}
+});
 
  
   

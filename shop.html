@@ -14,7 +14,7 @@
   <div class="container mx-auto flex justify-between items-center">
 
       <!-- Logo -->
-      <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+      <h1 class="text-xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex flex justify-center space-x-6">
@@ -23,9 +23,11 @@
           <a href="about.html" class="hover:text-red-500">About</a>
           <a href="contact.html" class="hover:text-red-500">Contact Us</a>
 
-          <div class="hidden md:flex items-center space-x-4">
-              <input type="text" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
-              <button class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+           <!--Search-->
+           <div class="hidden md:flex items-center space-x-4">
+            <input type="text" id="searchInput" placeholder="Search..." class="bg-white text-pink-600 rounded px-4 py-1 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button id="searchButton" class="bg-red-500 hover:bg-red-700 text-white px-4 py-1 rounded">Search</button>
+          </div> 
              
           <a href="cart.html" class="relative text-white hover:text-gray-500 transition">
               <i class="fa-solid fa-cart-shopping text-xl"></i>
@@ -56,53 +58,51 @@
   </nav>
 </header>
 
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-    
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+
       
 
     <!-- Product Grid Section-->
   <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 p-8 mt-12">
     <!-- Category Card -->
-    <a href="gents.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="gents.html" class=" product-item bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="GENTS">
       <img src="assets\pexels-akingbola-opeyemi-505464242-28520990.jpg" alt="Gents" class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold">GENTS</h3>
       <p class="text-gray-600"> PRODUCTS</p>
     </a>
   
-    <a href="ladies.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="ladies.html" class=" product-item block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="LADIES">
       <img src="assets\pexels-reyna-3075967.jpg" alt="Ladies" class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold">LADIES</h3>
       <p class="text-gray-600"> PRODUCTS</p>
     </a>
   
-    <a href="kids.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
-      <img src="assets\pexels-vika-glitter-392079-1651483.jpg" alt="Kidswear" class="w-full h-64 object-cover" />
+    <a href="kids.html" class=" product-item block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="KIDS">
+      <img src="assets\pexels-vika-glitter-392079-1651483.jpg" alt="Kidswear" class="w-full h-64 object-contain" />
       <h3 class="mt-4 text-xl font-semibold">KIDS & INFANTS</h3>
       <p class="text-gray-600"> PRODUCTS</p>
     </a>
   
-    <a href="bags.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
-      <img src="assets\pexels-anastasia-shuraeva-5705478.jpg" alt="Bags" class="w-full h-64 object-cover" />
+    <a href="bags.html" class=" product-item bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="BAGS">
+      <img src="assets\pexels-anastasia-shuraeva-5705478.jpg" alt="Bags" class="w-full h-64 object-contain" />
       <h3 class="mt-4 text-xl font-semibold">BAGS</h3>
       <p class="text-gray-600">PRODUCTS</p>
     </a>
   
-    <a href="perfumes.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
-      <img src="assets\pexels-valeriya-965989.jpg" alt="Perfumes" class="w-full h-64 object-cover" />
+    <a href="perfumes.html" class=" product-item block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="PERFUMES">
+      <img src="assets\pexels-valeriya-965989.jpg" alt="Perfumes" class="w-full h-64 object-contain" />
       <h3 class="mt-4 text-xl font-semibold">PERFUMES</h3>
       <p class="text-gray-600"> PRODUCTS</p>
     </a>
   
-    
   </div>
+
   
-  </body>
+  
+ 
+   <!-- No Results Message -->
+<div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+  No results found.
+</div>
   <!---Footer Section-->
       <footer class="bg-gray-900 text-white py-8">
           <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -136,6 +136,7 @@
                 <a href="index.html" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
                 
               </div>
+          </div>
 
 </body>
 <script type="text/javascript" src="script.js"></script>

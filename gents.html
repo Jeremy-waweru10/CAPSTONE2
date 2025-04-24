@@ -16,7 +16,7 @@
       <div class="container mx-auto flex justify-between items-center">
 
           <!-- Logo -->
-          <h1 class="text-3xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
+          <h1 class="text-xl font-bold mt-2 mb-2">JEREMIANA'S THRIFT STORE</h1>
 
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex flex justify-center space-x-6">
@@ -59,62 +59,59 @@
           
       </nav>
   </header>
-  
-  <script>
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-      });
-  </script>
 
        <!-- Product Grid Section-->
   <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 p-8 mt-12">
     <!-- Category Card -->
-    <a href="sweaters.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="sweaters.html" class=" product-item bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="Men Sweaters">
       <img src="assets\pexels-ron-lach-9594673.jpg" alt="Men Sweaters" class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold">Men Sweaters</h3>
       <p class="text-black-600"> PRODUCTS</p>
     </a>
   
-    <a href="shirts.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="shirts.html" class=" product-item block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="Men Shirts">
       <img src="assets\pexels-rdne-5698865.jpg" alt="Men Shirts" class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold">Men Shirts</h3>
       <p class="text-black-600">PRODUCTS</p>
     </a>
   
-    <a href="trousers.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="trousers.html" class=" product-item bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="Trousers">
       <img src="assets\pexels-mustapha-damilola-458083529-31220245.jpg" alt="Trousers" class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold">Trousers</h3>
       <p class="text-black-600"> PRODUCTS</p>
     </a>
   
-    <a href="shorts.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="shorts.html" class=" product-item bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="Men Shorts">
       <img src="assets\pexels-budgeron-bach-5158820.jpg" alt="Men Shorts" class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold">Men Shorts</h3>
       <p class="text-black-600"> PRODUCTS</p>
     </a>
   
-    <a href="accessories.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="accessories.html" class=" product-item bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="Men Accesories">
       <img src="assets\pexels-rdne-5699104.jpg" alt="Men Accessories " class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold">Men Accesories</h3>
       <p class="text-black-600"> PRODUCTS</p>
     </a>
   
-    <a href="undergaments.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <a href="undergaments.html" class=" product-item bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="Men Undergaments">
       <img src="assets\Screenshot 2025-03-23 140946.png" alt="Men Undergaments" class="w-full h-64 object-cover" />
       <h3 class="mt-4 text-xl font-semibold"> Men Undergaments</h3>
       <p class="text-black-600"> PRODUCTS</p>
     </a>
   
-  <a href="menshoes.html" class="block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+  <a href="menshoes.html" class=" product-item block bg-gray-100 p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105" data-name="Men Shoes">
     <img src="assets\Zola Men's Low Top Casual Sneakers - Cafe _ 43.jpeg" alt="menshoes.html" class="w-full h-64 object-cover" />
     <h3 class="mt-4 text-xl font-semibold"> Men Shoes</h3>
     <p class="text-black-600"> PRODUCTS</p>
   </a>
 </div>
 </div>
+
+
+        <!-- No Results Message -->
+        <div id="no-results" class="text-center text-red-500 text-xl font-semibold mt-6 hidden">
+          No results found.
+        </div>
 
 <!---Footer Section-->
 <footer class="bg-gray-900 text-white py-8">
